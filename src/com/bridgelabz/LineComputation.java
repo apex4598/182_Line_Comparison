@@ -1,6 +1,7 @@
 package com.bridgelabz;
 
 import java.util.Objects;
+import java.util.Scanner;
 
 public class LineComputation {
     public static double x1,x2,y1,y2,x3,y3,y4,x4,lineLength;
@@ -39,7 +40,31 @@ public class LineComputation {
 
     }
     public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
         System.out.println("Welcome to Line Comprise Program");
+        System.out.println("enter the values");
+
+        x1 = s.nextDouble();
+        y1 = s.nextDouble();
+        x2 = s.nextDouble();
+        y2 = s.nextDouble();
+
+        System.out.println("enter the values x3,y3,x4,y4");
+
+        x3 = s.nextDouble();
+        y3 = s.nextDouble();
+        x4 = s.nextDouble();
+        y4 = s.nextDouble();
+
+        LineComputation lc = new LineComputation();
+
+        lc.calculateLength(x1, y1, x2, y2);
+        lc.calculateLength(x3, y3, x4, y4);
+
+        //lc.checkEqual();
+        lc.compare();
 
     }
+
 }
